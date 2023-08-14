@@ -1,2 +1,5 @@
 main.py
 gs.sh
+.*
+__pycache__
+.gitignore
