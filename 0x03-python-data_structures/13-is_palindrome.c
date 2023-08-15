@@ -80,6 +80,7 @@ int is_palindrome(listint_t **head)
 		h = h->next;
 		tmp = tmp->next;
 	}
+	revers_list(&mid);
 	return (1);
 
 }
