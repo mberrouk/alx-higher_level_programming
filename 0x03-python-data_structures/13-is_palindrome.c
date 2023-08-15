@@ -61,7 +61,7 @@ int is_palindrome(listint_t **head)
 
 
 	if (!head || !*head || !(*head)->next)
-		return (0);
+		return (1);
 	tmp = *head;
 	size = lst_size(tmp);
 	i = 0;
