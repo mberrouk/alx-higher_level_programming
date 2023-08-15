@@ -32,6 +32,8 @@ listint_t *revers_list(listint_t **head)
 	listint_t *prev;
 
 	tmp = *head;
+	prev = NULL;
+	next = NULL;
 	while (tmp)
 	{
 		next = tmp->next;
@@ -70,7 +72,8 @@ int is_palindrome(listint_t **head)
 	}
 	if (!(size % 2) && tmp->n != tmp->next->n)
 		return (0);
-	mid = revers_list(&tmp->next);
+	tmp = tmp->next;
+	mid = revers_list(&tmp);
 	tmp = *head;
 	h = mid;
 	while (h)
