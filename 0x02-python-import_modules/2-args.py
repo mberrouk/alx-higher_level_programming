@@ -9,7 +9,7 @@ if __name__ == "__main__":
     elif ac == 1:
         print("1 argument:")
     else:
-        print("{} argumets:".format(ac))
+        print("{} arguments:".format(ac))
     x = 1
     while (x < ac + 1):
         print("{}: {}".format(x, sys.argv[x]))
