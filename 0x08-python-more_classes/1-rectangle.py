@@ -6,7 +6,14 @@ class Rectangle:
     """ The rectangle class """
 
     def __init__(self, width=0, height=0):
-        """ Initializing class """
+        """ Initializing class
+        Args:
+            width: width of the rectangle
+            height: height of the rectangle
+        Raises:
+            TypeError: value is not an integer
+            ValueError: value is less than zero
+        """
         self.__height = height
         self.__width = width
 
