@@ -55,7 +55,7 @@ class Rectangle:
         return ((self.height * 2) + (self.width * 2))
 
     def __str__(self):
-        """
+        """ Return a string of the rectangle with the character #.
         """
         if not self.height or not self.width:
             return ("")
@@ -68,6 +68,8 @@ class Rectangle:
         return ("".join(rect))
 
     def __repr__(self):
-        """"""
+        """ Return a string representation of the rectangle
+        to be able to recreate a new instance by using eval().
+        """
         return ("Rectangle(" + str(self.__width) + ","
                 + str(self.__height) + ")")
