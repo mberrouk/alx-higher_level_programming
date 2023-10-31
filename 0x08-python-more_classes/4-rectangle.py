@@ -71,5 +71,5 @@ class Rectangle:
         """ Return a string representation of the rectangle
         to be able to recreate a new instance by using eval().
         """
-        return ("Rectangle(" + str(self.__width) + ","
-                + str(self.__height) + ")")
+        return ("".append("Rectangle(" + str(self.__width) + ","
+                + str(self.__height) + ")"))
