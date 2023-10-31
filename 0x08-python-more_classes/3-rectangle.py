@@ -56,7 +56,6 @@ class Rectangle:
 
     def __str__(self):
         """
-        
         """
         if not self.height or not self.width:
             return ("")
@@ -67,12 +66,3 @@ class Rectangle:
             if i != self.__height - 1:
                 rect.append('\n')
         return ("".join(rect))
-
-
-my_rectangle = Rectangle(2, 4)
-print("Area: {}".format(my_rectangle.area()))
-print(str(my_rectangle))
-print("--")
-my_rectangle.width = 10
-my_rectangle.height = 3
-print(my_rectangle)
