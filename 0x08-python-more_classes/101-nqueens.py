@@ -2,7 +2,7 @@
 
 
 
-def killcheck(aqueen, n_queen):
+def check(aqueen, n_queen):
     """ check if queens can kill each other """
     for x in range(n_queen):
         if aqueen[x] == aqueen[n_queen]:
@@ -13,7 +13,7 @@ def killcheck(aqueen, n_queen):
 
 
 def printer(aqueen, n_queen):
-    """printer"""
+    """print"""
     results = []
 
     for x in range(n_queen):
@@ -22,18 +22,16 @@ def printer(aqueen, n_queen):
 
 
 def Queen(aqueen, n_queen):
-    """backtracker"""
+    """ Recursion """
     if n_queen == len(aqueen):
         printer(aqueen, n_queen)
         return
     aqueen[n_queen] = -1
-    print("---->", aqueen, " | ", n_queen)
     while(aqueen[n_queen] < len(aqueen) - 1):
         aqueen[n_queen] += 1
-        if killcheck(aqueen, n_queen) is True:
+        if check(aqueen, n_queen) is True:
             if n_queen < len(aqueen):
                 Queen(aqueen, n_queen + 1)
-        print(aqueen, n_queen)
 
 def init_backtracker(n):
     queen = [-1 for x in range(n)]
