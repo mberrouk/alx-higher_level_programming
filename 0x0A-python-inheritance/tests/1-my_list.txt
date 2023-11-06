@@ -1,0 +1,66 @@
+# 1-my_list.txt
+
+=======================
+How to use 1-my_list.py
+=======================
+
+Module: define a class that inherits from ``list``.
+
+::
+Import Module
+
+	>>> MyList = __import__('1-my_list').MyList
+	>>> emptylist = MyList()
+
+::
+Basic test
+
+	>>> print(emptylist)
+	[]
+
+	>>> intlist = MyList([0, 1, 2, 3])
+	>>> print(intlist)
+	[0, 1, 2, 3]
+
+::
+Check ``TypeError``
+
+	>>> mlist = MyList([1, 2], [1, 2])
+	Traceback (most recent call last):
+	TypeError: list expected at most 1 argument, got 2
+
+	>>> nonelist = MyList(None)
+	Traceback (most recent call last):
+	TypeError: 'NoneType' object is not iterable
+
+::
+
+	>>> MyList.print_sorted()
+	Traceback (most recent call last):
+	TypeError: print_sorted() missing 1 required positional argument: 'self'
+
+	>>> MyList.print_sorted(1)
+	Traceback (most recent call last):
+	TypeError: 'int' object is not iterable
+
+	>>> errsorte = MyList(["hello", "0", "world", 0])
+	>>> print(errsorte)
+	['hello', '0', 'world', 0]
+
+	>>> errsorte.print_sorted()
+	Traceback (most recent call last):
+	TypeError: '<' not supported between instances of 'int' and 'str'
+
+::
+strings list
+
+	>>> strlist = MyList()
+	>>> strlist.append("zyx")
+	>>> strlist.append("kji")
+	>>> strlist.append("pon")
+	>>> strlist.append("cba")
+	>>> print(strlist)
+	['zyx', 'kji', 'pon', 'cba']
+
+	strlist.print_sorted()
+	['cba', 'pon', 'kji', 'zyx']
