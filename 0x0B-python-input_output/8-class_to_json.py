@@ -6,7 +6,7 @@ Module: function that returns the dictionary description with simple
 """
 
 
-def class_of_json(obj):
+def class_to_json(obj):
     """ Return the dictionary description for
         JSON serialization of an objct.
     Args:
