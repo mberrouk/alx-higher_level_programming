@@ -16,7 +16,7 @@ class Student:
         """ Retrieve a dictionary repersentation
             of a Student
         """
-        if (attrs and type(attrs) == list
+        if (type(attrs) == list
                 and all(type(arg) == str for arg in attrs)):
             new_dict = {key: self.__dict__[key]
                         for key in attrs if key in self.__dict__}
