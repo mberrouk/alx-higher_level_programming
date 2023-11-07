@@ -46,10 +46,19 @@ integer_validator
 	Traceback (most recent call last):
 	TypeError: test3 must be an integer
 
-	>>> b.integer_validator('test4', "hello") 
+	>>> b.integer_validator('test4', None) 
 	Traceback (most recent call last):
 	TypeError: test4 must be an integer
 
 	>>> b.integer_validator()
 	Traceback (most recent call last):
 	TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+	>>> b.integer_validator({'test4', 1}, (1, 2)) 
+	Traceback (most recent call last):
+	TypeError: {1, 'test4'} must be an integer
+
+	>>> b.integer_validator('name')
+	Traceback (most recent call last):
+	TypeError: integer_validator() missing 1 required positional argument: 'value'
+
