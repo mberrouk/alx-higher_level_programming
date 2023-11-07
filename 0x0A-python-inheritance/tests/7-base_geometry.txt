@@ -66,3 +66,7 @@ integer_validator
 	Traceback (most recent call last):
 	TypeError: test5 must be an integer
 
+	>>> b.integer_validator(None, [1])
+	Traceback (most recent call last):
+	TypeError: None must be an integer
+
