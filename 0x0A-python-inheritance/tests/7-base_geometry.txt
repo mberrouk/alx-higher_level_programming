@@ -68,3 +68,7 @@ tests includes name
 	>>> b.integer_validator(None, [1])
 	Traceback (most recent call last):
 	TypeError: None must be an integer
+
+	>>> b.integer_validator('None', {1, 2})
+	Traceback (most recent call last):
+	TypeError: None must be an integer
