@@ -11,5 +11,7 @@ def class_of_json(obj):
         JSON serialization of an objct.
     Args:
         obj: object
+    Return:
+        the dictionary description.
     """
-    return (obj.__doc__)
+    return (obj.__dict__)
