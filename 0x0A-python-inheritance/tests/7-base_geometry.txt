@@ -1,0 +1,47 @@
+# 7-base_geometry.txt
+
+=============================
+How To Use 7-base_geometry.py
+=============================
+
+::
+import Module
+
+	>>> base_geometry = __import__('7-base_geometry').BaseGeometry
+	>>> b = base_geometry()
+	>>> type(b)
+	<class '7-base_geometry.BaseGeometry'>
+
+	>>> b = base_geometry("hello")
+	Traceback (most recent call last):
+	TypeError: BaseGeometry() takes no arguments
+
+=======
+Methods
+=======
+
+::
+area
+
+	>>> b = base_geometry()
+	>>> b.area()
+	Traceback (most recent call last):
+	Exception: area() is not implemented
+
+::
+integer_validator
+
+	>>> b.integer_validator('hello', 1)
+	>>> b.integer_validator('test0', 1024)
+
+	>>> b.integer_validator('test1', 0)
+	Traceback (most recent call last):
+	ValueError: test1 must be greater than 0
+
+	>>> b.integer_validator('test2', -1)
+	Traceback (most recent call last):
+	ValueError: test2 must be greater than 0
+
+	>>> b.integer_validator('test3', "hello") 
+	Traceback (most recent call last):
+	TypeError: test3 must be an integer
