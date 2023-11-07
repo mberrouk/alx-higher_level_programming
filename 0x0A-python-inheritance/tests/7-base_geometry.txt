@@ -58,6 +58,9 @@ integer_validator
 	Traceback (most recent call last):
 	TypeError: {1, 'test4'} must be an integer
 
+::
+tests includes name
+
 	>>> b.integer_validator('name')
 	Traceback (most recent call last):
 	TypeError: integer_validator() missing 1 required positional argument: 'value'
