@@ -6,8 +6,7 @@ The class definition of a State and an instance Base
 from sqlalchemy import MetaData, Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 
-mymetadata = MetaData()
-Base = declarative_base(metadata=mymetadata)
+Base = declarative_base()
 
 
 class State(Base):
